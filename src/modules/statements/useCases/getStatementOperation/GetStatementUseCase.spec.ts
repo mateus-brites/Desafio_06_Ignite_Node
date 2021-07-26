@@ -59,8 +59,8 @@ describe("Get balance", () => {
     expect(response).toHaveProperty("id");
   })
 
-  it("Should not be able to get a statement with invalid user_id", () => {
-    expect(async () => {
+  it("Should not be able to get a statement with invalid user_id", async () => {
+    await expect(async () => {
       const logon = {
         name: "user",
         email: "user@rocketseat.com",
